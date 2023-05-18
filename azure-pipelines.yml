@@ -1,0 +1,17 @@
+trigger:
+  branches:
+    include:
+     - '*'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - script: |
+      mv $(Build.Repository.LocalPath)/* $(Build.ArtifactStagingDirectory) -f
+    displayName: Move Files
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'qa_selenium'
+      publishLocation: 'Container'
