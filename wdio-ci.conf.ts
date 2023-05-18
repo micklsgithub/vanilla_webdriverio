@@ -1,20 +1,5 @@
 const outlookRestHelper = require('./src/util/outlookRestHelper');
 
-//see miro page for flow of updating test cases in azure  https://miro.com/app/board/uXjVMfJp2DU=/
-//import { ITestCaseHookParameter } from '@cucumber/cucumber'
-//import { Capabilities, Frameworks, Options, Services } from '@wdio/types'
-
-              /*AzureDevopsService,
-              {
-                  pat: 'h7a2qdnihdwcsxw3oztsbkwew5dbboppmg6qpnvtsnw4xpkvvi3a',
-                  organizationUrl: 'https://dev.azure.com/CapitaGovDS',
-                  projectId: 'b6c56786-93ed-47c0-81d1-ee9747b9b2c5',
-                  planId: 8507,
-                  suiteId: 14077,
-                  caseIdRegex: '@?[ref](https://github.com/gianlucamangiapelo/wdio-azure-devops-service/blob/master/\\d+)',
-                  runName: 'Turing regression tests',
-              },*/
-
 export const config: WebdriverIO.Config = {
     //
     // ====================
@@ -115,7 +100,7 @@ export const config: WebdriverIO.Config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://app.at-01.ts.grantis.co.uk/',
+    baseUrl: '',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
